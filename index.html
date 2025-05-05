@@ -1,1 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eventixel - Plataforma de Eventos 3D</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Orbitron', sans-serif;
+      background-color: #121212;
+      color: #e0e0e0;
+    }
+    header {
+      background-color: #1f1f1f;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      font-size: 28px;
+      color: #00ffd0;
+    }
+    nav a {
+      color: #ffffff;
+      margin: 0 15px;
+      text-decoration: none;
+    }
+    .hero {
+      text-align: center;
+      padding: 60px 20px;
+      background: linear-gradient(to right, #1f1f1f, #2d2d2d);
+    }
+    .hero h1 {
+      font-size: 48px;
+      color: #00ffd0;
+    }
+    .btn {
+      padding: 15px 30px;
+      background: #00ffd0;
+      color: #000;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .section-title {
+      font-size: 32px;
+      margin-bottom: 20px;
+      color: #00ffd0;
+    }
+    .card {
+      background-color: #1e1e1e;
+      padding: 20px;
+      margin: 10px 0;
+      border-left: 4px solid #00ffd0;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #1f1f1f;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">Eventixel</div>
+  <nav>
+    <a href="#funcionalidades">Funcionalidades</a>
+    <a href="#ia">IA Personalizada</a>
+    <a href="#precos">Preços</a>
+    <a href="#contato">Contato</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Crie Eventos Incríveis em 3D com a Eventixel</h1>
+  <p>Presencial, Virtual ou Híbrido — Tudo em um só lugar</p>
+  <button class="btn">Comece Agora</button>
+</section>
+
+<section id="funcionalidades">
+  <h2 class="section-title">Funcionalidades</h2>
+  <div class="card">✅ Criação de layout 3D com palcos, estandes, mesas e decoração</div>
+  <div class="card">✅ Escolha entre locais físicos da plataforma ou local próprio</div>
+  <div class="card">✅ Serviços adicionais como iluminação, catering e som</div>
+  <div class="card">✅ Suporte para eventos híbridos: parte virtual, parte presencial</div>
+</section>
+
+<section id="ia">
+  <h2 class="section-title">Assistente IA para Personalização</h2>
+  <p>Digite o tema do seu evento e a nossa IA vai sugerir:</p>
+  <ul>
+    <li>🎨 Layouts personalizados</li>
+    <li>📦 Pacotes de decoração</li>
+    <li>📅 Cronograma sugerido</li>
+  </ul>
+  <input type="text" id="tema" placeholder="Digite o tema do evento" style="width: 80%; padding: 10px;">
+  <button class="btn" onclick="gerarSugestoes()">Gerar Sugestões</button>
+  <div id="sugestoes" style="margin-top: 20px;"></div>
+</section>
+
+<script>
+  function gerarSugestoes() {
+    const tema = document.getElementById('tema').value;
+    const sugestoes = document.getElementById('sugestoes');
+    if (!tema.trim()) {
+      sugestoes.innerHTML = "<p>Por favor, insira um tema válido.</p>";
+      return;
+    }
+    sugestoes.innerHTML = `
+      <div class="card">🎨 Layout sugerido para "${tema}": Estilo futurista com LED e hologramas.</div>
+      <div class="card">🍽️ Catering sugerido: Finger foods sofisticados com coquetéis temáticos.</div>
+      <div class="card">🎵 Música ambiente: Trilhas instrumentais contemporâneas.</div>
+    `;
+  }
+</script>
+
+<section id="precos">
+  <h2 class="section-title">Preços</h2>
+  <div class="card">🎫 Evento Virtual: <strong>R$ 2.000</strong></div>
+  <div class="card">🏢 Evento Presencial em Espaço Eventixel: <strong>R$ 5.000</strong></div>
+  <div class="card">🌐 Evento Híbrido (até 1000 pessoas): <strong>R$ 8.000</strong></div>
+  <div class="card">🛠️ Serviços Adicionais:
+    <ul>
+      <li>Decoração personalizada: R$ 1.000</li>
+      <li>Iluminação e som: R$ 1.500</li>
+      <li>Catering premium: R$ 2.500</li>
+      <li>Consultoria com IA: Inclusa</li>
+    </ul>
+  </div>
+</section>
+
+<section id="contato">
+  <h2 class="section-title">Fale Conosco</h2>
+  <p>Email: contato@eventixel.com</p>
+  <p>Telefone: (11) 99999-9999</p>
+</section>
+
+<footer>
+  <p>© 2025 Eventixel. Todos os direitos reservados.</p>
+</footer>
+
+</body>
+</html>
 
